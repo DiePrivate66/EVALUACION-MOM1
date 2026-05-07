@@ -8,38 +8,48 @@
             <Label x:Name="UsuarioConectadoLabel" Style="{StaticResource ConnectedUserStyle}" />
             <Label Text="REGISTRO" Style="{StaticResource SectionTitleStyle}" />
 
-            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto"
-                  ColumnDefinitions="Auto,*"
-                  RowSpacing="10"
-                  ColumnSpacing="10">
-                <Label Grid.Row="0" Grid.Column="0" Text="Fecha:" VerticalTextAlignment="Center" />
-                <DatePicker Grid.Row="0" Grid.Column="1" x:Name="FechaDatePicker" />
+            <Border Style="{StaticResource CardBorderStyle}">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Datos de inscripción" Style="{StaticResource FieldTitleStyle}" />
+                    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+                          ColumnDefinitions="Auto,*"
+                          RowSpacing="10"
+                          ColumnSpacing="10">
+                        <Label Grid.Row="0" Grid.Column="0" Text="Fecha:" VerticalTextAlignment="Center" Style="{StaticResource FieldTitleStyle}" />
+                        <DatePicker Grid.Row="0" Grid.Column="1" x:Name="FechaDatePicker" />
 
-                <Label Grid.Row="1" Grid.Column="0" Text="País:" VerticalTextAlignment="Center" />
-                <Picker Grid.Row="1" Grid.Column="1" x:Name="PaisPicker" Title="Seleccione país" SelectedIndexChanged="OnPaisChanged" />
+                        <Label Grid.Row="1" Grid.Column="0" Text="País:" VerticalTextAlignment="Center" Style="{StaticResource FieldTitleStyle}" />
+                        <Picker Grid.Row="1" Grid.Column="1" x:Name="PaisPicker" Title="Seleccione país" SelectedIndexChanged="OnPaisChanged" />
 
-                <Label Grid.Row="2" Grid.Column="0" Text="Ciudad:" VerticalTextAlignment="Center" />
-                <Picker Grid.Row="2" Grid.Column="1" x:Name="CiudadPicker" Title="Seleccione ciudad" />
+                        <Label Grid.Row="2" Grid.Column="0" Text="Ciudad:" VerticalTextAlignment="Center" Style="{StaticResource FieldTitleStyle}" />
+                        <Picker Grid.Row="2" Grid.Column="1" x:Name="CiudadPicker" Title="Seleccione ciudad" />
 
-                <Label Grid.Row="3" Grid.Column="0" Text="Monto inicial:" VerticalTextAlignment="Center" />
-                <Entry Grid.Row="3" Grid.Column="1" x:Name="MontoInicialEntry" Placeholder="Ingrese monto" Keyboard="Numeric" TextChanged="OnMontoInicialChanged" />
+                        <Label Grid.Row="3" Grid.Column="0" Text="Monto inicial:" VerticalTextAlignment="Center" Style="{StaticResource FieldTitleStyle}" />
+                        <Entry Grid.Row="3" Grid.Column="1" x:Name="MontoInicialEntry" Placeholder="Ingrese monto" Keyboard="Numeric" TextChanged="OnMontoInicialChanged" />
 
-                <Label Grid.Row="4" Grid.Column="0" Text="Pago mensual:" VerticalTextAlignment="Center" />
-                <Entry Grid.Row="4" Grid.Column="1" x:Name="PagoMensualEntry" IsReadOnly="True" />
-            </Grid>
+                        <Label Grid.Row="4" Grid.Column="0" Text="Pago mensual:" VerticalTextAlignment="Center" Style="{StaticResource FieldTitleStyle}" />
+                        <Entry Grid.Row="4" Grid.Column="1" x:Name="PagoMensualEntry" IsReadOnly="True" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
 
-            <Grid RowDefinitions="Auto,Auto"
-                  ColumnDefinitions="*,*,*"
-                  RowSpacing="10"
-                  ColumnSpacing="10">
-                <Label Grid.Row="0" Grid.Column="0" Text="Nombre" HorizontalTextAlignment="Center" />
-                <Label Grid.Row="0" Grid.Column="1" Text="Apellido" HorizontalTextAlignment="Center" />
-                <Label Grid.Row="0" Grid.Column="2" Text="Edad" HorizontalTextAlignment="Center" />
+            <Border Style="{StaticResource CardBorderStyle}">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Datos del estudiante" Style="{StaticResource FieldTitleStyle}" />
+                    <Grid RowDefinitions="Auto,Auto"
+                          ColumnDefinitions="*,*,*"
+                          RowSpacing="10"
+                          ColumnSpacing="10">
+                        <Label Grid.Row="0" Grid.Column="0" Text="Nombre" HorizontalTextAlignment="Center" Style="{StaticResource FieldTitleStyle}" />
+                        <Label Grid.Row="0" Grid.Column="1" Text="Apellido" HorizontalTextAlignment="Center" Style="{StaticResource FieldTitleStyle}" />
+                        <Label Grid.Row="0" Grid.Column="2" Text="Edad" HorizontalTextAlignment="Center" Style="{StaticResource FieldTitleStyle}" />
 
-                <Entry Grid.Row="1" Grid.Column="0" x:Name="NombreEntry" Placeholder="Ingresar nombre" />
-                <Entry Grid.Row="1" Grid.Column="1" x:Name="ApellidoEntry" Placeholder="Ingresar apellido" />
-                <Entry Grid.Row="1" Grid.Column="2" x:Name="EdadEntry" Placeholder="Edad" Keyboard="Numeric" />
-            </Grid>
+                        <Entry Grid.Row="1" Grid.Column="0" x:Name="NombreEntry" Placeholder="Ingresar nombre" />
+                        <Entry Grid.Row="1" Grid.Column="1" x:Name="ApellidoEntry" Placeholder="Ingresar apellido" />
+                        <Entry Grid.Row="1" Grid.Column="2" x:Name="EdadEntry" Placeholder="Edad" Keyboard="Numeric" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
 
             <Button Text="Ver Resumen" Style="{StaticResource PrimaryActionButtonStyle}" Clicked="OnVerResumenClicked" />
         </VerticalStackLayout>
