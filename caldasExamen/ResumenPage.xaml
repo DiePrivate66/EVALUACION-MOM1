@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="caldasExamen.ResumenPage"
+             Title="Resumen">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="14">
+            <Label x:Name="UsuarioConectadoLabel" Style="{StaticResource ConnectedUserStyle}" />
+            <Label Text="RESUMEN" Style="{StaticResource SectionTitleStyle}" />
+
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                  ColumnDefinitions="Auto,*"
+                  RowSpacing="10"
+                  ColumnSpacing="12">
+                <Label Grid.Row="0" Grid.Column="0" Text="Nombre:" />
+                <Label Grid.Row="0" Grid.Column="1" x:Name="NombreValueLabel" Style="{StaticResource DataValueStyle}" />
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Apellido:" />
+                <Label Grid.Row="1" Grid.Column="1" x:Name="ApellidoValueLabel" Style="{StaticResource DataValueStyle}" />
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Edad:" />
+                <Label Grid.Row="2" Grid.Column="1" x:Name="EdadValueLabel" Style="{StaticResource DataValueStyle}" />
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Fecha:" />
+                <Label Grid.Row="3" Grid.Column="1" x:Name="FechaValueLabel" Style="{StaticResource DataValueStyle}" />
+
+                <Label Grid.Row="4" Grid.Column="0" Text="Ciudad:" />
+                <Label Grid.Row="4" Grid.Column="1" x:Name="CiudadValueLabel" Style="{StaticResource DataValueStyle}" />
+
+                <Label Grid.Row="5" Grid.Column="0" Text="País:" />
+                <Label Grid.Row="5" Grid.Column="1" x:Name="PaisValueLabel" Style="{StaticResource DataValueStyle}" />
+
+                <Label Grid.Row="6" Grid.Column="0" Text="Monto inicial:" />
+                <Label Grid.Row="6" Grid.Column="1" x:Name="MontoInicialValueLabel" Style="{StaticResource DataValueStyle}" />
+
+                <Label Grid.Row="7" Grid.Column="0" Text="Pago mensual:" />
+                <Label Grid.Row="7" Grid.Column="1" x:Name="PagoMensualValueLabel" Style="{StaticResource DataValueStyle}" />
+
+                <Label Grid.Row="8" Grid.Column="0" Text="Pago total:" FontAttributes="Bold" />
+                <Label Grid.Row="8" Grid.Column="1" x:Name="PagoTotalValueLabel" Style="{StaticResource DataValueStyle}" FontAttributes="Bold" />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

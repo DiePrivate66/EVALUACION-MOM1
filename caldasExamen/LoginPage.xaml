@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="caldasExamen.LoginPage"
+             Title="Login">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="18">
+            <Image Source="logo_suda.png"
+                   HeightRequest="120"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit" />
+
+            <Label Text="LOGIN"
+                   TextColor="Red"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold" />
+
+            <Grid RowDefinitions="Auto,Auto"
+                  ColumnDefinitions="Auto,*"
+                  RowSpacing="12"
+                  ColumnSpacing="12">
+                <Label Grid.Row="0" Grid.Column="0" Text="Usuario:" VerticalTextAlignment="Center" />
+                <Entry Grid.Row="0" Grid.Column="1" x:Name="UsuarioEntry" Placeholder="Ingrese usuario" />
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Contraseña:" VerticalTextAlignment="Center" />
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="ContrasenaEntry" Placeholder="Ingrese contraseña" IsPassword="True" />
+            </Grid>
+
+            <Button Text="Iniciar sesión" Clicked="OnIniciarSesionClicked" Style="{StaticResource PrimaryActionButtonStyle}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
